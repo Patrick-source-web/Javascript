@@ -57,6 +57,36 @@
         sum(10, 15);
 
         //Declaring a function and execute the codes with "return keyword" which is going to serve as console.log
+
+        const calc = function(a, b){
+            
+            console.log(a*b)
+        }
+
+        calc(4, 5);
+
+        //Default parameters: This is the way of assigning specific value to the parameter so incase
+        //Codes executed return something valuable instead of returning NaN value.
+
+        // const add= function (x, y){
+        //     console.log(x*y)
+        //     return x*y;
+        // }
+        // add(2);
+
+        //When the above code is run, it will return a NaN which is not a number value.
+        //So, to fix this issue we use default parameters method.
+
+        const add= function (x, y=0){
+            console.log(2*(x+y))
+            return x*y;
+        }
+        add(2);
+        //The above code will return a valid value by using default parameter whereby
+        //we assumed that the second parameter would be at least equalized with specific value.
+
+        
+
         
 
 
