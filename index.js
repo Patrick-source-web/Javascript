@@ -44,18 +44,19 @@
 
         //Without expression
 
-        // function sayMyName(){
-        //     console.log("Hey, Patrick")
-        // }
-
-        // sayMyName();
-
-        //Declaring a function with expression
-        let sayMyName= function(){
-            console.log("Hey, Patrick")
+        function sayMyName(){
+        console.log("Hey, Patrick")
         }
+
         sayMyName();
 
+        //Declaring a function with expression
+        let sum= function(number1, number2){
+            console.log(number1 + number2)
+        }
+        sum(10, 15);
+
+        //Declaring a function and execute the codes with "return keyword" which is going to serve as console.log
         
 
 
