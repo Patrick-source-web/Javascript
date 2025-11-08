@@ -40,4 +40,22 @@
 
         console.log(calculateAge(2002));
 
+        // Defining a function with expression and without expression
+
+        //Without expression
+
+        // function sayMyName(){
+        //     console.log("Hey, Patrick")
+        // }
+
+        // sayMyName();
+
+        //Declaring a function with expression
+        let sayMyName= function(){
+            console.log("Hey, Patrick")
+        }
+        sayMyName();
+
+        
+
 
