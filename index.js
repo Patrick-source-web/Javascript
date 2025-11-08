@@ -114,6 +114,19 @@
         multiplication(2,3);
         
 
+        //Nested functions
+        //This is the way of dealing a function within another function.
+        //Example
+
+        function subtract(x, y){
+            console.log(x - y);
+            function subtract2(x, y){
+                console.log(x - y)
+            }
+            subtract2(4, 5);
+        }
+        subtract(8, 5);
+
         
 
 
