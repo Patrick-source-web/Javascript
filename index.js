@@ -85,7 +85,19 @@
         //The above code will return a valid value by using default parameter whereby
         //we assumed that the second parameter would be at least equalized with specific value.
 
-        
+        //Rest parameter: this is the method by which a function is capable of holding two parameters
+        //but exceptionally the second one will hold array values"bunch of values".
+        //1.Rest parameter must be only
+        //2.|Rest parameter must be the last one.
+
+        const collectItems = function(x, ...y){
+            console.log(x)
+            console.log(y)
+        }
+        collectItems(19, 2,3,6,7,8);
+        //The above parameters specifically for the second one is the rest parameter with three dots
+        //those dots allow the function to hold as many values as you want but it will represent them
+        //as an array in the browser.
 
         
 
