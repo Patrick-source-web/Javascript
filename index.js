@@ -99,6 +99,21 @@
         //those dots allow the function to hold as many values as you want but it will represent them
         //as an array in the browser.
 
+        //Arrow function:
+
+        const multiply = (x, y) => {
+            console.log(x*y)
+            return x*y;
+        }
+        multiply(2, 4);
+
+        //Other way when the definition or statement in the function body "argument" is made of only one line.
+
+        const multiplication = (x, y) => x*y;
+        
+        multiplication(2,3);
+        
+
         
 
 
