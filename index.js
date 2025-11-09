@@ -127,6 +127,43 @@
         }
         subtract(8, 5);
 
+        //Function scope: 
+        //These are the rules that are followed when accessing variable
+        //defined inside or outside of the function.
+        //!Since nested function is about defining a function inside 
+        //another function, function scope is about "who access what?"
+        //1.When a function is runnig globally, it means that the function
+        //is not running inside any other function. 
+        //1.1. The varible defined inside a function cannot be accessed outside
+        //of that function.
+        //Example:
+        function myToDo(){
+            const homeActivities = ["washing clothes", "washing dishes", "mopping a house"];
+            const schoolActivities = ["reading", "work on pre-class", "setting up goals"];
+            console.log(homeActivities, schoolActivities);
+        }
+
+        myToDo();
+        //So, this is to mean if I loged the variables outside the function could not work.
+        console.log(homeActivities, schoolActivities);
+        //This is returning that homeActivities is not defined because it is accessed outside
+        //of the function it has been defined in. The first log is working but the second is not.
+
+
+
+        //2. A function can access all the variables defined inside it. Also, the function can access
+        //all the variables declared in the global scope which means out side of the function.
+        //Example:
+
+        let activitiesAtHome = ["washing clothes", "washing dishes", "mopping a house"];
+        let activitiesAtSchool = ["reading", "work on pre-class", "setting up goals"];
+        function MyTasks (){
+            console.log(activitiesAtSchool, activitiesAtHome);
+        }
+        MyTasks();
+        //This will work since the function is accessing the variables that were defined in the scope.
+        
+
         
 
 
