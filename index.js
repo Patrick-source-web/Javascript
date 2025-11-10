@@ -206,7 +206,7 @@
         //So, the code lines outside of the function is returning Hola Patrick which has been before Hello Patrick
         //because I changed the variable greeting= "Hello" to greeting = "Hola" and this second value was assigned
         //outside of the function. So, this function is called impure function and the effect that happened is called 
-        //aside effect.
+        //aside effect. This is the effect whereby the variable is taking effect regardless scope function "outside of the scope"
         
         function sayHello(name){
         let greeting = "Hi"
@@ -216,6 +216,14 @@
        
         
         sayHello("Patrick");
+
+        // IIFE: which stands for imediately invoked function expression. This is whereby the developers want the variable 
+        //to not mix or conflicts with the scope function.
+        //Example:
+        (function(){
+            let count= 4;
+            console.log(count);
+        })()
         
         
        
