@@ -119,9 +119,11 @@
         //Example
 
         function subtract(x, y){
-            console.log(x - y);
+            // console.log(x - y);
+            return x-y;
             function subtract2(x, y){
-                console.log(x - y)
+                // console.log(x - y)
+                return x-y;
             }
             subtract2(4, 5);
         }
@@ -145,7 +147,7 @@
 
         myToDo();
         //So, this is to mean if I loged the variables outside the function could not work.
-        console.log(homeActivities, schoolActivities);
+        // console.log(homeActivities, schoolActivities);
         //This is returning that homeActivities is not defined because it is accessed outside
         //of the function it has been defined in. The first log is working but the second is not.
 
@@ -162,8 +164,63 @@
         }
         MyTasks();
         //This will work since the function is accessing the variables that were defined in the scope.
-        
 
+
+        //Closure
+        // function createCounter (){
+        //     let count= 0;
+        //     console.log(count);
+        // }
+        // createCounter();
+
+        // function outer(x){
+        //     function inner(y){
+        //         return x+y;
+        //     }
+        //     return inner;
+        //     const outerReturn = outer(10)
+        //     outerReturn;
+        // }
+
+        //Pure function: This is the function whereby the input will be returned as the output.
+        //Example:
+        function sayHello(name) {
+           
+            console.log(`Hello ${name}`)
+             return `Hello ${name}`
+        }
+
+        sayHello("Patrick");
+
+        //Impure function: This is where the input will affect the output and this is called aside effect
+        //Example:
+        let greeting= "Hello"
+        function sayGreeting(name) {
+          console.log(`${greeting} ${name}`);
+          
+        }
+
+        sayGreeting("Patrick");
+        greeting= "Hola"
+        sayGreeting("Patrick")
+        //So, the code lines outside of the function is returning Hola Patrick which has been before Hello Patrick
+        //because I changed the variable greeting= "Hello" to greeting = "Hola" and this second value was assigned
+        //outside of the function. So, this function is called impure function and the effect that happened is called 
+        //aside effect.
+        
+        function sayHello(name){
+        let greeting = "Hi"
+        console.log(`${greeting} ${name}`)
+        
+        }
+       
+        
+        sayHello("Patrick");
+        
+        
+       
+        
+        
         
 
 
